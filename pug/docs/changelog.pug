@@ -1,0 +1,56 @@
+extends ../_pug-includes/layout
+
+block vars
+    - var active = 'docs'  
+    - var bodyAttrs = {'data-spy': "scroll", 'data-target': "#components-nav", 'data-offset':"80"}
+    - var path = '../'    
+    - var breadcrumbs = []
+    - breadcrumbs.push({name: 'Home', link: '../index.html'})
+    - breadcrumbs.push({name: 'Documentation', link: 'introduction.html'})
+    - breadcrumbs.push({name: 'Changelog'})
+    - var heroHeading = 'Changelog'
+    - var current = 'docs/changelog.html'
+
+block content
+
+    +breadcrumbs(breadcrumbs)
+    +pageHeader(heroHeading) 
+
+    section.mb-5 
+        .row
+            .col-xl-10
+                .card.mb-4
+                    .card-header
+                        span.badge.badge-info-light.rounded-pill.float-end 2021-08-14
+                        h6.card-heading Version 1.2
+                    .card-body
+                        pre.card-text.
+                            - <strong>New:</strong> 5 E-commerce pages 
+                            - <strong>New:</strong> 2 Knowledge base pages
+                            - <strong>Improved:</strong> Added light card table header (theme/_card.scss)
+                            - <strong>Improved:</strong> Added avatar flag, avatar text, avatar xxs (theme/_avatar.scss)
+                            - <strong>Updated:</strong> updated dependencies (Bootstrap 5.1.0, iMask 6.1.0, PrismJs 1.24.1, FullCalendar 5.9.0)
+                .card.mb-4
+                    .card-header
+                        span.badge.badge-info-light.rounded-pill.float-end 2021-06-10
+                        h6.card-heading Version 1.1
+                    .card-body
+                        pre.card-text.
+                            - <strong>New:</strong> 26+ new widgets to display your data - showcased on widgets-stats.html, and widgets-data.html
+                            - <strong>Improved:</strong> Added additional styling option for DataTables - tables-datatable.html 
+                            - <strong>Improved:</strong> Added fade-in effect for Data Tables on CMS Category (cms-category.html) and CMS Post (cms-post.html)
+                            - <strong>Improved:</strong> Added Flag SVGs 
+                            - <strong>Improved:</strong> Nicer search field + suggestions dropdown (navbar.pug, navbar.scss, theme.js)
+                            - <strong>Improved:</strong> Animated dropdown class (dropdown.scss, theme.scss)
+                            - <strong>Improved:</strong> Added more styling options to the basic tables showcase - tables.html
+                            - <strong>Improved:</strong> removed expand FA icons from sidebar CSS, now solved by inlined svgs 
+                            - <strong>Updated:</strong> updated dependencies (Bootstrap 5.0.1, FullCalendar 5.7.0, Glightbox 3.0.9)
+            
+                .card.mb-4
+                    .card-header
+                        span.badge.badge-info-light.rounded-pill.float-end 2021-05-20
+                        h6.card-heading Version 1.0
+                    .card-body
+                        pre.card-text.
+                            Initial release
+            
